@@ -1,0 +1,24 @@
+# Complete the has_cycle function below.
+
+#
+# For your reference:
+#
+# SinglyLinkedListNode:
+#     int data
+#     SinglyLinkedListNode next
+#
+#
+def has_cycle(head):
+    res =[]
+
+    while head is not None:
+       if head not in res:
+           res.append(head)
+           head = head.next
+       else:
+            return True
+    return False      
+         
+
+
+if __name__ == '__main__':
